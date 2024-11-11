@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agrim Kumar Malhotra's Portfolio</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #121212; /* Dark background */
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding: 0;
+        }
+
+        /* Animation for Background Glow */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff4081, #00bcd4, #3f51b5, #9c27b0);
+            animation: gradientAnimation 15s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background: linear-gradient(45deg, #ff4081, #00bcd4, #3f51b5, #9c27b0); }
+            25% { background: linear-gradient(45deg, #9c27b0, #3f51b5, #00bcd4, #ff4081); }
+            50% { background: linear-gradient(45deg, #3f51b5, #9c27b0, #ff4081, #00bcd4); }
+            75% { background: linear-gradient(45deg, #00bcd4, #ff4081, #9c27b0, #3f51b5); }
+            100% { background: linear-gradient(45deg, #00bcd4, #3f51b5, #9c27b0, #ff4081); }
+        }
+
+        /* Intro Page Styles */
+        .intro-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro-content h1 {
+            font-size: 3.5rem;
+            color: #00b8d4; /* Cyan for the glowing effect */
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00b8d4, 0 0 20px #00b8d4; /* Cyan glow effect */
+        }
+
+        .intro-content p {
+            font-size: 1.5rem;
+            color: #b0bec5;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .enter-button {
+            padding: 12px 30px;
+            font-size: 1.5rem;
+            background-color: #00b8d4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 0 20px #00b8d4, 0 0 40px #00b8d4;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .enter-button:hover {
+            background-color: #0288d1;
+            transform: scale(1.1);
+        }
+
+        /* Portfolio Section */
+        .portfolio-container {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #00b8d4;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            color: #00b8d4;
+            text-shadow: 0 0 10px #00b8d4, 0 0 20px #00b8d4;
+            margin-bottom: 20px;
+        }
+
+        .skills, .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill, .project {
+            background: #2c2c2c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+        }
+
+        .skill:hover, .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+            border: 2px solid #00b8d4;
+        }
+
+        .skill h3, .project h3 {
+            font-size: 1.6rem;
+            color: #00b8d4;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #00b8d4;
+        }
+
+        .skill p, .project p {
+            color: #cfd8dc;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1rem;
+            color: #b0bec5;
+        }
+
+        footer a {
+            color: #00b8d4;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Background with subtle glow -->
+    <div class="background"></div>
+
+    <!-- First Page: Intro Page -->
+    <div class="intro-page">
+        <div class="intro-content">
+            <h1>Agrim Kumar Malhotra</h1>
+            <p>State-level Badminton Player | AME CET AIR 1 | Python Enthusiast</p>
+            <a href="#portfolio" class="enter-button">Enter Portfolio</a>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio" class="portfolio-container">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Agrim, a passionate badminton player and a Python developer.</p>
+        </header>
+
+        <section>
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Badminton</h3>
+                    <p>State-level player with extensive experience in both singles and doubles competitions.</p>
+                </div>
+                <div class="skill">
+                    <h3>Python</h3>
+                    <p>Skilled in Python programming for building web apps, automation, and data science projects.</p>
+                </div>
+                <div class="skill">
+                    <h3>Problem Solving</h3>
+                    <p>Experienced in solving complex problems with efficient algorithms and data structures.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-heading">Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Task Automation Script</h3>
+                    <p>Automated routine tasks like file organization and system updates using Python.</p>
+                </div>
+                <div class="project">
+                    <h3>AI-based Prediction System</h3>
+                    <p>A machine learning model that predicts the outcome of sports events based on historical data.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Contact me at: <a href="mailto:agrim.malhotra2024@nst.rishihood.edu.in">agrim.malhotra2024@nst.rishihood.edu.in</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
